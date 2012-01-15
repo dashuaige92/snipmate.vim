@@ -1,3 +1,15 @@
+# Django template snippets
+snippet %
+	{% ${1:template} %}
+snippet block
+	{% block ${1:name} %}
+snippet csrf
+	{% csrf_token %}
+snippet for
+	{% for ${1:i} in ${2:a} %}
+		${3:}
+	{% endfor %}
+
 # Some useful Unicode entities
 # Non-Breaking Space
 snippet nbs

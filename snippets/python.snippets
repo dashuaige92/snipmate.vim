@@ -1,6 +1,17 @@
 snippet #!
 	#!/usr/bin/env python
 
+# Django python snippets
+snippet char
+	${1:variable} = models.CharField(max_length=${2:50})
+snippet datetime
+	${1:variable} = models.DateTimeField(${2:'name'})
+snippet int
+	${1:variable} = models.IntegerField()
+snippet key
+	${1:variable} = models.ForeignKey(${2:Key})
+
+
 snippet imp
 	import ${1:module}
 # Module Docstring

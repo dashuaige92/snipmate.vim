@@ -3,13 +3,23 @@ snippet #!
 
 # Django python snippets
 snippet char
-	${1:variable} = models.CharField(max_length=${2:50})
+	${1:var} = models.CharField(max_length=${2:50})
+	${3:}
+snippet text
+	${1:var} = models.TextField(max_length=${2:5000})
+	${3:}
 snippet datetime
-	${1:variable} = models.DateTimeField(${2:'name'})
+	${1:var} = models.DateTimeField(${2:'name'})
+	${3:}
 snippet int
-	${1:variable} = models.IntegerField()
+	${1:var} = models.IntegerField()
+	${3:}
 snippet key
-	${1:variable} = models.ForeignKey(${2:Key})
+	${1:var} = models.ForeignKey(${2:Key})
+	${3:}
+snippet url
+	url(r'^${1:url}', ${2:view}),
+	${3:}
 
 
 snippet imp

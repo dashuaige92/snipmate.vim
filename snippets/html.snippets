@@ -3,6 +3,8 @@ snippet %
 	{% ${1:template} %}
 snippet block
 	{% block ${1:name} %}
+	${2:content}
+	{% endblock %}
 snippet csrf
 	{% csrf_token %}
 snippet for

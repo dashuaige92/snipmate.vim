@@ -11,6 +11,69 @@ snippet for
 	{% for ${1:i} in ${2:a} %}
 		${3:}
 	{% endfor %}
+snippet if
+	{% if ${1:i} %}
+		${2:}
+	{% endif %}
+snippet ifelse
+	{% if ${1:i} %}
+		${2:}
+	{% else %}
+		${3:}
+	{% endif %}
+
+# HTML5 tags
+snippet tag
+	<${1:script}>
+		${2}
+	</${1:script}>
+
+snippet art
+	<article>
+		${1}
+	</article>
+snippet det
+	<details>
+		${1}
+	</details>
+snippet fig
+	<figure>
+		${1}
+	</figure>
+snippet footer
+	<footer>
+		${1}
+	</footer>
+snippet header
+	<header>
+		${1}
+	</header>
+snippet nav
+	<nav>
+		${1}
+	</nav>
+
+# custom HTML tags
+snippet a
+	<a href="${1:/index.html}">${2:text}</a>${3}
+snippet p
+	<p>
+	  ${1:content}
+	</p>
+snippet tb
+	<table>
+	  <tr>
+	    ${1:head}
+	  </tr>
+	</table>${2}
+snippet td
+	<td>${1:data}</td>${2}
+snippet th
+	<th${1:options}>${2:header}</th>${3}
+snippet tr
+	<tr>
+	  ${1:content}
+	</tr>
 
 # Some useful Unicode entities
 # Non-Breaking Space
@@ -162,6 +225,8 @@ snippet movie
 			pluginspage="http://www.apple.com/quicktime/download/"
 		`Close()[1:]`>
 	</object>${6}
+
+
 snippet fieldset
 	<fieldset id="$1">
 		<legend>${1:name}</legend>
@@ -182,7 +247,9 @@ snippet input
 snippet label
 	<label for="${2:$1}">${1:name}</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="${5}" id="${6:$2}"`Close()`>${7}
 snippet link
-	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}
+	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}">${4}
+
+	/*<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}*/
 snippet mailto
 	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
 snippet meta

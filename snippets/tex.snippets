@@ -1,3 +1,79 @@
+# Math Shortcuts
+snippet \L
+	\Longleftrightarrow 
+snippet \Lr
+	\Longrightarrow 
+snippet \Ll
+	\Longleftarrow 
+snippet \i
+	\implies 
+snippet \r
+	\rightarrow 
+snippet \s
+	\subset 
+snippet \seq
+	\subseteq 
+snippet \t
+	\text{${1: if }}${2}
+snippet \sr
+	\stackrel{${1}}{${2:\rightarrow}}
+snippet $$
+	\[
+		${1}
+	\]
+snippet {}
+	\braces{${1}}${2}
+snippet []
+	\bracks{${1}}${2}
+snippet ()
+	\parens{${1}}${2}
+# Styling
+snippet i
+	\emph{${1:term}}${2}
+snippet bf
+	\mathbf{${1:x}}${2}
+snippet scr
+	\mathscr{${1:T}}${2}
+snippet bb
+	\mathbb{${1:Z}}${2}
+# Math Environments
+snippet pf
+	\begin{proof}
+		${1}
+	\end{proof}
+snippet thm
+	\begin{theorem}
+		${1}
+	\end{theorem}
+snippet rem
+	\begin{remark}
+		${1}
+	\end{remark}
+snippet ex
+	\begin{example}
+		${1}
+	\end{example}
+snippet exer
+	\begin{exercise}
+		${1}
+	\end{exercise}
+snippet def
+	\begin{definition}
+		${1}
+	\end{definition}
+snippet cor
+	\begin{corollary}
+		${1}
+	\end{corollary}
+snippet claim
+	\begin{claim}
+		${1}
+	\end{claim}
+snippet prop
+	\begin{proposition}
+		${1}
+	\end{proposition}
+
 # \begin{}...\end{}
 snippet begin
 	\begin{${1:env}}
@@ -9,45 +85,15 @@ snippet tab
 	${3}
 	\end{$1}
 # Align(ed)
-snippet ali
+snippet align
 	\begin{align${1:ed}}
 		${2}
 	\end{align$1}
-# Gather(ed)
-snippet gat
-	\begin{gather${1:ed}}
-		${2}
-	\end{gather$1}
-# Equation
-snippet eq
-	\begin{equation}
-		${1}
-	\end{equation}
-# Unnumbered Equation
-snippet \
-	\\[
-		${1}
-	\\]
 # Enumerate
 snippet enum
 	\begin{enumerate}
 		\item ${1}
 	\end{enumerate}
-# Itemize
-snippet item
-	\begin{itemize}
-		\item ${1}
-	\end{itemize}
-# Description
-snippet desc
-	\begin{description}
-		\item[${1}] ${2}
-	\end{description}
-# Matrix
-snippet mat
-	\begin{${1:p/b/v/V/B/small}matrix}
-		${2}
-	\end{$1matrix}
 # Cases
 snippet cas
 	\begin{cases}
@@ -113,3 +159,33 @@ snippet section
 	${1:Section}~\ref{${2:sec:}}${3}
 snippet page
 	${1:page}~\pageref{${2}}${3}
+# Gather(ed)
+snippet gat
+	\begin{gather${1:ed}}
+		${2}
+	\end{gather$1}
+# Equation
+snippet eq
+	\begin{equation}
+		${1}
+	\end{equation}
+# Unnumbered Equation
+snippet \
+	\\[
+		${1}
+	\\]
+# Itemize
+snippet item
+	\begin{itemize}
+		\item ${1}
+	\end{itemize}
+# Description
+snippet desc
+	\begin{description}
+		\item[${1}] ${2}
+	\end{description}
+# Matrix
+snippet mat
+	\begin{${1:p/b/v/V/B/small}matrix}
+		${2}
+	\end{$1matrix}

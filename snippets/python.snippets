@@ -1,6 +1,9 @@
 snippet #!
 	#!/usr/bin/env python
-
+snippet imp
+	import ${1:module}
+snippet from
+	from ${1:module} import ${2:submodule}
 # Django python snippets
 snippet char
 	${1:var} = models.CharField(max_length=${2:50})
@@ -20,10 +23,6 @@ snippet key
 snippet url
 	url(r'^${1:url}', ${2:view}),
 	${3:}
-
-
-snippet imp
-	import ${1:module}
 # Module Docstring
 snippet docs
 	'''

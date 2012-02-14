@@ -1,4 +1,10 @@
 # Math Shortcuts
+snippet \c
+	{{${1:n}}\choose{${2:k}}}${3}
+snippet \e
+	\exists
+snippet \n
+	\notin
 snippet \L
 	\Longleftrightarrow 
 snippet \Lr
@@ -6,27 +12,29 @@ snippet \Lr
 snippet \Ll
 	\Longleftarrow 
 snippet \i
-	\implies 
+	\implies ${1}
 snippet \r
-	\rightarrow 
+	\rightarrow ${1}
+snippet \m
+	\mapsto
 snippet \s
-	\subset 
+	\subset ${1}
 snippet \seq
-	\subseteq 
+	\subseteq ${1}
 snippet \t
 	\text{${1: if }}${2}
 snippet \sr
-	\stackrel{${1}}{${2:\rightarrow}}
+	\stackrel{${1}}{${2:\rightarrow}}${3}
 snippet $$
 	\[
 		${1}
 	\]
 snippet {}
-	\braces{${1}}${2}
+	\braces{${1}}
 snippet []
-	\bracks{${1}}${2}
+	\bracks{${1}}
 snippet ()
-	\parens{${1}}${2}
+	\parens{${1}}
 # Styling
 snippet i
 	\emph{${1:term}}${2}
@@ -37,18 +45,22 @@ snippet scr
 snippet bb
 	\mathbb{${1:Z}}${2}
 # Math Environments
-snippet pf
-	\begin{proof}
+snippet lemma
+	\begin{lemma}
 		${1}
-	\end{proof}
-snippet thm
-	\begin{theorem}
+	\end{lemma}
+snippet claim
+	\begin{claim}
 		${1}
-	\end{theorem}
-snippet rem
-	\begin{remark}
+	\end{claim}
+snippet cor
+	\begin{corollary}
 		${1}
-	\end{remark}
+	\end{corollary}
+snippet def
+	\begin{definition}
+		${1}
+	\end{definition}
 snippet ex
 	\begin{example}
 		${1}
@@ -57,23 +69,22 @@ snippet exer
 	\begin{exercise}
 		${1}
 	\end{exercise}
-snippet def
-	\begin{definition}
+snippet pf
+	\begin{proof}
 		${1}
-	\end{definition}
-snippet cor
-	\begin{corollary}
-		${1}
-	\end{corollary}
-snippet claim
-	\begin{claim}
-		${1}
-	\end{claim}
+	\end{proof}
 snippet prop
 	\begin{proposition}
 		${1}
 	\end{proposition}
-
+snippet rem
+	\begin{remark}
+		${1}
+	\end{remark}
+snippet thm
+	\begin{theorem}
+		${2}
+	\end{theorem}
 # \begin{}...\end{}
 snippet begin
 	\begin{${1:env}}

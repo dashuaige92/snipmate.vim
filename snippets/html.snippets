@@ -1,14 +1,18 @@
-snippet test
-	<meta name="${1:name}" content="${2:content}">${3}
-# HTML5 tags
-snippet tag
-	<${1:script}>
-		${2}
-	</${1:script}>
+# HTML tags
+snippet a
+	<a href="${1:/index.html}">${2:text}</a>${3}
 snippet article
 	<article>
 		${1}
 	</article>
+snippet canvas
+	<canvas width="${1:800}" height="${2:600}">${3}</canvas>${4}
+snippet col
+	<col ${1}/>${2}
+snippet colg
+	<colgroup>
+		${1}
+	</colgroup>
 snippet details
 	<details>
 		${1}
@@ -25,31 +29,26 @@ snippet header
 	<header>
 		${1}
 	</header>
+snippet img
+	<img src="${1:link}" alt="${2:img not found}" />${3}
 snippet nav
 	<nav>
 		${1}
 	</nav>
-# custom HTML tags
-snippet a
-	<a href="${1:/index.html}">${2:text}</a>${3}
-snippet col
-	<col ${1}/>${2}
-snippet colg
-	<colgroup>
-		${1}
-	</colgroup>
-snippet img
-	<img src="${1:link}" alt="${2:img not found}" />${3}
 snippet p
 	<p>
-	  ${1:content}
+		${1:content}
 	</p>
+snippet tag
+	<${1:script}>
+		${2}
+	</${1:script}>
 snippet tb
 	<table>
-	  <tr>
-	    ${1:head}
-	  </tr>
-	</table>${2}
+		<tr>
+			${1:head}
+		</tr>
+	</table>
 snippet td
 	<td>${1:data}</td>${2}
 snippet th
@@ -180,7 +179,7 @@ snippet script
 	<script type="text/javascript" charset="utf-8">
 		${1}
 	</script>${2}
-snippet scriptsrc
+snippet src
 	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>${2}
 snippet style
 	<style type="text/css" media="${1:screen}">

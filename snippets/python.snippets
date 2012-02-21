@@ -30,10 +30,8 @@ snippet class
 		"""
 		${3:docstring for $1}
 		"""
-		def __init__(self, ${4:arg}):
+		def __init__(self${4:, arg}):
 			${5:super($1, self).__init__()}
-			self.$4 = $4
-			${6}
 # New Function
 snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
@@ -46,7 +44,7 @@ snippet deff
 		${3}
 # New Method
 snippet defs
-	def ${1:mname}(self, ${2:arg}):
+	def ${1:mname}(self${2:, arg}):
 		${3:pass}
 # New Property
 snippet property

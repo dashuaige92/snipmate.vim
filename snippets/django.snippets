@@ -1,23 +1,19 @@
-# Django template snippets
-snippet %
-	{% ${1:template} %}
-snippet %block
-	{% block ${1:name} %}
-	${2:content}
-	{% endblock %}
-snippet %csrf
-	{% csrf_token %}
-snippet %for
-	{% for ${1:i} in ${2:a} %}
-		${3:}
-	{% endfor %}
-snippet %if
-	{% if ${1:i} %}
-		${2:}
-	{% endif %}
-snippet %ifelse
-	{% if ${1:i} %}
-		${2:}
-	{% else %}
-		${3:}
-	{% endif %}
+# Django python snippets
+snippet char
+	${1:var} = models.CharField(max_length=${2:50})
+	${3:}
+snippet text
+	${1:var} = models.TextField(max_length=${2:5000})
+	${3:}
+snippet datetime
+	${1:var} = models.DateTimeField(${2:'name'})
+	${3:}
+snippet int
+	${1:var} = models.IntegerField()
+	${2:}
+snippet key
+	${1:var} = models.ForeignKey(${2:Key})
+	${3:}
+snippet url
+	url(r'^${1:url}', ${2:view}),
+	${3:}

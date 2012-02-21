@@ -1,9 +1,23 @@
 # Self-executing anonymous function
-snippet seaf
-	(function () {
+snippet ff
+	(function() {
 		${1}
 	})();
 ################################################# DEFAULTS BELOW
+# Object Method
+snippet mf
+	${1:method_name}: function(${2:attribute}) {
+		${4}
+	}${3:,}
+# setTimeout function
+snippet timeout
+	setTimeout(function() {${3}}${2}, ${1:10};
+# Get Elements
+snippet get
+	getElementsBy${1:TagName}('${2}')${3}
+# Get Element
+snippet gett
+	getElementBy${1:Id}('${2}')${3}
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
@@ -12,19 +26,25 @@ snippet proto
 	};
 # Function
 snippet fun
-	function ${1:function_name} (${2:argument}) {
+	function ${1:function_name}(${2:argument}) {
 		${3:// body...}
 	}
 # Anonymous Function
 snippet f
-	function(${1}) {${2}};
+	function(${1}) {${2}}
 # if
 snippet if
-	if (${1:true}) {${2}}
+	if (${1:true}) {
+		${2}
+	}
 # if ... else
 snippet ife
-	if (${1:true}) {${2}}
-	else{${3}}
+	if (${1:true}) {
+		${2}
+	}
+	else { 
+		${3} 
+	}
 # tertiary conditional
 snippet t
 	${1:/* condition */} ? ${2:a} : ${3:b}
@@ -46,12 +66,12 @@ snippet case
 	${3}
 # for (...) {...}
 snippet for
-	for (var ${2:i} = 0; $2 < ${1:Things}.length; $2${3:++}) {
+	for (var ${2:i} = 0; $2 < ${1:length}; ${3:$2++}) {
 		${4:$1[$2]}
 	};
 # for (...) {...} (Improved Native For-Loop)
 snippet forr
-	for (var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2${3:--}) {
+	for (var ${2:i} = ${1:length-1}; $2 >= 0; ${3:$2--}) {
 		${4:$1[$2]}
 	};
 # while (...) {...}
@@ -64,17 +84,3 @@ snippet do
 	do {
 		${2:/* code */}
 	} while (${1:/* condition */});
-# Object Method
-snippet :f
-	${1:method_name}: function(${2:attribute}) {
-		${4}
-	}${3:,}
-# setTimeout function
-snippet timeout
-	setTimeout(function() {${3}}${2}, ${1:10};
-# Get Elements
-snippet get
-	getElementsBy${1:TagName}('${2}')${3}
-# Get Element
-snippet gett
-	getElementBy${1:Id}('${2}')${3}

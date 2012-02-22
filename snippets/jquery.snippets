@@ -9,6 +9,14 @@ snippet import jQueryUI minimal
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 # on
 snippet on
-	$('${1}').on('${2:click}', function() {
-		
+	$(${1}).on('${2:click}', function() {
+		${3}
 	});
+snippet animate
+	$(${1}).animate({
+		${3}
+	}, ${2:500})
+snippet jf
+	(function($) {
+		${1}
+	})(jQuery);

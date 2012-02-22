@@ -36,7 +36,9 @@ endif
 
 call GetSnippets(snippets_dir, '_') " Get global snippets
 
-call ExtractSnipsFile(g:snippets_dir.'django.snippets', 'html')
+call ExtractSnipsFile(g:snippets_dir.'django.snippets', 'python')
+call ExtractSnipsFile(g:snippets_dir.'lorem.snippets', 'html')
+call ExtractSnipsFile(g:snippets_dir.'jinja.snippets', 'html')
 call ExtractSnipsFile(g:snippets_dir.'jquery.snippets', 'javascript')
 
 au FileType * if &ft != 'help' | call GetSnippets(snippets_dir, &ft) | endif

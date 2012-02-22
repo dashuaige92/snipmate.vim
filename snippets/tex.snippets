@@ -6,11 +6,11 @@ snippet \e
 snippet \n
 	\notin
 snippet \L
-	\Longleftrightarrow 
+	\Longleftrightarrow ${1}
 snippet \Lr
-	\Longrightarrow 
+	\Longrightarrow ${1}
 snippet \Ll
-	\Longleftarrow 
+	\Longleftarrow ${1}
 snippet \i
 	\implies ${1}
 snippet \r
@@ -60,6 +60,19 @@ snippet cor
 snippet def
 	\begin{definition}
 		${1}
+=======
+snippet claim
+	\begin{claim}
+		${1}
+	\end{claim}
+snippet cor
+	\begin{corollary}
+		${1}
+	\end{corollary}
+snippet def
+	\begin{definition}
+		${1}
+>>>>>>> 2ec3e0d182cba604b1936b940f78d5cc55a15390
 	\end{definition}
 snippet ex
 	\begin{example}
@@ -83,7 +96,7 @@ snippet rem
 	\end{remark}
 snippet thm
 	\begin{theorem}
-		${2}
+		${1}
 	\end{theorem}
 # \begin{}...\end{}
 snippet begin
@@ -106,7 +119,7 @@ snippet enum
 		\item ${1}
 	\end{enumerate}
 # Cases
-snippet cas
+snippet cases
 	\begin{cases}
 		${1:equation}, &\text{ if }${2:case}\\
 		${3}

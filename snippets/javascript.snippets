@@ -4,6 +4,20 @@ snippet ff
 		${1}
 	})();
 ################################################# DEFAULTS BELOW
+# Object Method
+snippet mf
+	${1:method_name}: function(${2:attribute}) {
+		${4}
+	}${3:,}
+# setTimeout function
+snippet timeout
+	setTimeout(function() {${3}}${2}, ${1:10};
+# Get Elements
+snippet get
+	getElementsBy${1:TagName}('${2}')${3}
+# Get Element
+snippet gett
+	getElementBy${1:Id}('${2}')${3}
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} = function(${3:args}) {
@@ -12,6 +26,9 @@ snippet proto
 # Function
 snippet fun
 	function ${1:foo}(${2:bar}) {
+		${3:// body...}
+	}
+# Anonymous Function
 		${3:// body...}
 	}
 # Anonymous Function
@@ -58,12 +75,12 @@ snippet fore
 	}
 # for (...) {...}
 snippet for
-	for (var ${2:i} = 0; $2 < ${1:Things}.length; $2${3:++}) {
+	for (var ${2:i} = 0; $2 < ${1:length}; ${3:$2++}) {
 		${4:$1[$2]}
 	}
 # for (...) {...} (Improved Native For-Loop)
 snippet forr
-	for (var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2${3:--}) {
+	for (var ${2:i} = ${1:length-1}; $2 >= 0; ${3:$2--}) {
 		${4:$1[$2]}
 	}
 # while (...) {...}
@@ -76,17 +93,3 @@ snippet do
 	do {
 		${2:/* code */}
 	} while (${1:/* condition */});
-# Object Method
-snippet :f
-	${1:method_name}: function(${2:attribute}) {
-		${4}
-	}${3:,}
-# setTimeout function
-snippet timeout
-	setTimeout(function() {${3}}${2}, ${1:10};
-# Get Elements
-snippet get
-	getElementsBy${1:TagName}('${2}')${3}
-# Get Element
-snippet gett
-	getElementBy${1:Id}('${2}')${3}

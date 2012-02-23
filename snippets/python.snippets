@@ -4,7 +4,14 @@ snippet imp
 	import ${1:module}
 snippet from
 	from ${1:module} import ${2:submodule}
+# __methods__
+snippet init
+	__init__(${1})
 # Module Docstring
+snippet doc
+	'''
+	${1}
+	'''
 snippet docs
 	'''
 	File: ${1:`Filename('$1.py', 'foo.py')`}
@@ -32,6 +39,10 @@ snippet class
 		"""
 		def __init__(self${4:, arg}):
 			${5:super($1, self).__init__()}
+			${6}
+snippet super
+	super(${1:this.__clas__}, self).__init__(${2})
+	${3}
 # New Function
 snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
@@ -57,8 +68,6 @@ snippet property
 # Lambda
 snippet ld
 	${1:var} = lambda ${2:vars} : ${3:action}
-snippet .
-	self.
 snippet try Try/Except
 	try:
 		${1:pass}

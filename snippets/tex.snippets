@@ -1,3 +1,42 @@
+# Specific Shortcuts
+snippet br
+	\mathbb{R}${1}
+snippet bc
+	\mathbb{C}${1}
+snippet bf
+	\mathbb{F}${1}
+snippet bq
+	\mathbb{Q}${1}
+snippet bz
+	\mathbb{Z}${1}
+snippet seq
+	${1:a_}${2:1}, \hdots, $1${3:n}${4}
+snippet 2
+	\sqrt{2}${1}
+snippet 3
+	\sqrt{3}${1}
+snippet 5
+	\sqrt{5}${1}
+snippet 7
+	\sqrt{7}${1}
+snippet 32
+	\sqrt[3]{2}${1}
+snippet 42
+	\sqrt[4]{2}${1}
+snippet a
+	\alpha${1}
+snippet b
+	\beta${1}
+snippet d
+	\delta${1}
+snippet g
+	\gamma${1}
+snippet s
+	\sigma${1}
+snippet p
+	\phi${1}
+snippet v
+	\varphi${1}
 # Math Shortcuts
 snippet \c
 	{{${1:n}}\choose{${2:k}}}${3}
@@ -5,6 +44,8 @@ snippet \e
 	\exists ${1}
 snippet \f
 	\forall ${1}
+snippet \fr
+	\frac{${1:1}}{${2:2}}${3}
 snippet \n
 	\notin ${1}
 snippet \L
@@ -23,6 +64,8 @@ snippet \s
 	\subset ${1}
 snippet \seq
 	\subseteq ${1}
+snippet \sum
+	\sum_{${1:i=0}}^{${2:n}}${3}
 snippet \t
 	\text{${1: if }}${2}
 snippet \sr
@@ -41,7 +84,7 @@ snippet ()
 # Styling
 snippet i
 	\emph{${1:term}}${2}
-snippet bf
+snippet \bf
 	\mathbf{${1:x}}${2}
 snippet scr
 	\mathscr{${1:T}}${2}
@@ -215,3 +258,7 @@ snippet mat
 	\begin{${1:p/b/v/V/B/small}matrix}
 		${2}
 	\end{$1matrix}
+snippet array
+	\parens{\begin{array}{${1:cc}}
+		${2}
+	\end{array}}

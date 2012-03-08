@@ -1,39 +1,46 @@
+snippet p
+	System.out.print(${1});
+snippet pn
+	System.out.println(${1});
+snippet enum
+	${1:public }enum {
+		${2}
+	}
 snippet main
-	public static void main (String [] args)
-	{
+	public static void main(String[] args) {
 		${1:/* code */}
 	}
 snippet pu
-	public
+	public ${1}
 snippet po
-	protected
+	protected ${1}
 snippet pr
-	private
+	private ${1}
 snippet st
-	static
+	static ${1}
 snippet fi
-	final
+	final ${1}
 snippet ab
-	abstract
+	abstract ${1}
 snippet re
-	return
+	return${1}
 snippet br
-	break;
+	break;${1}
 snippet de
 	default:
 		${1}
 snippet ca
 	catch(${1:Exception} ${2:e}) ${3}
 snippet th
-	throw 
+	throw${1}
 snippet sy
-	synchronized
+	synchronized${1}
 snippet im
-	import
+	import ${1}
 snippet imp
-	implements
+	implements ${1}
 snippet ext
-	extends 
+	extends  ${1}
 snippet j.u
 	java.util
 snippet j.i
@@ -45,15 +52,25 @@ snippet j.n
 snippet j.m
 	java.math.
 snippet if
-	if (${1}) ${2}
+	if (${1:true}) {
+		${2}
+	}
 snippet el
-	else 
+	else {
+		${2}
+	}
 snippet elif
-	else if (${1}) ${2}
+	else if (${1}) {
+		${2}
+	} 
 snippet wh
-	while (${1}) ${2}
+	while (${1}) {
+		${2}
+	} 
 snippet for
-	for (${1}; ${2}; ${3}) ${4}
+	for (${1:int i = 0}; ${2:i < 10}; ${3:i++}) {
+		${4}
+	} 
 snippet fore
 	for (${1} : ${2}) ${3}
 snippet sw

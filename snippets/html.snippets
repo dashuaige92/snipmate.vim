@@ -1,3 +1,9 @@
+snippet n
+	<${1:node}${2}>
+		${3}
+	</$1>
+snippet m
+	<${1:span}${2}>${3}</$1>
 # HTML tags
 snippet a
 	<a href="${1:/index.html}">${2:text}</a>${3}
@@ -22,14 +28,26 @@ snippet colg
 		${1}
 	</colgroup>
 snippet css
-	<link rel="stylesheet" href="${1:/css/master.css}" type="text/css" media="screen" />${2}
+	<link rel="stylesheet" href="${1:/css/master}.css" type="text/css" media="screen" />${2}
 snippet details
 	<details>
 		${1}
 	</details>
-snippet div
-	<div${1: id=""}>
+snippet d
+	<div>
+		${1}
+	</div>
+snippet di
+	<div id="${1:}">
 		${2}
+	</div>
+snippet dc
+	<div class="${1:}">
+		${2}
+	</div>
+snippet div
+	<div id="${1:}" class="${2:}">
+		${3}
 	</div>
 snippet fieldset
 	<fieldset${2: id="$1"}>
@@ -49,28 +67,28 @@ snippet form
 		${3}
 	</form>
 snippet h1
-	<h1${1: id="heading"}>
-		${2:$1}
+	<h1>
+		${1}
 	</h1>
 snippet h2
-	<h2${1: id="heading"}>
-		${2:$1}
+	<h2>
+		${1}
 	</h2>
 snippet h3
-	<h3${1: id="heading"}>
-		${2:$1}
+	<h3>
+		${1}
 	</h3>
 snippet h4
-	<h4${1: id="heading"}>
-		${2:$1}
+	<h4>
+		${1}
 	</h4>
 snippet h5
-	<h5${1: id="heading"}>
-		${2:$1}
+	<h5>
+		${1}
 	</h5>
 snippet h6
-	<h6${1: id="heading"}>
-		${2:$1}
+	<h6>
+		${1}
 	</h6>
 #<meta http-equiv="content-type" content="text/html; charset=utf-8"`Close()`>
 snippet head
@@ -117,6 +135,7 @@ snippet p
 	<p>
 		${1:content}
 	</p>
+	${2}
 snippet js
 	<script type="text/javascript">
 		${1}

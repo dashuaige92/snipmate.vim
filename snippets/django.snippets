@@ -1,19 +1,31 @@
-# Django python snippets
+# View snippets
+snippet view
+	def ${1:view_name}(request):
+		return render_to_response(${2:'index.html'}, {
+			${3}
+		})
+# Model snippets
 snippet char
 	${1:var} = models.CharField(max_length=${2:50})
-	${3:}
+	${3}
+snippet dec
+	${1:var} = models.DecimalField(max_digits=${2:10}, decimal_places=${3:2})
+	${4}
+snippet file
+	${1:var} = models.FileField(uploaded_to=${2:'path'})
+	${3}
 snippet text
 	${1:var} = models.TextField(max_length=${2:5000})
-	${3:}
+	${3}
 snippet datetime
 	${1:var} = models.DateTimeField(${2:'name'})
-	${3:}
+	${3}
 snippet int
 	${1:var} = models.IntegerField()
-	${2:}
+	${2}
 snippet key
 	${1:var} = models.ForeignKey(${2:Key})
-	${3:}
+	${3}
 snippet url
 	url(r'^${1:url}', ${2:view}),
-	${3:}
+	${3}

@@ -1,21 +1,21 @@
 # Django template snippets
-snippet %
+snippet \
 	{% ${1:template} %}
-snippet %block
+snippet \block
 	{% block ${1:name} %}
 	${2:content}
 	{% endblock %}
-snippet %csrf
+snippet \csrf
 	{% csrf_token %}
-snippet %for
+snippet \for
 	{% for ${1:i} in ${2:a} %}
 		${3:}
 	{% endfor %}
-snippet %if
+snippet \if
 	{% if ${1:i} %}
 		${2:}
 	{% endif %}
-snippet %ifelse
+snippet \ifelse
 	{% if ${1:i} %}
 		${2:}
 	{% else %}

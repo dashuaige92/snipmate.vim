@@ -20,9 +20,9 @@ snippet Def
 	#ifndef $1
 	#define ${1:SYMBOL} ${2:value}
 	#endif${3}
-snippet def
+snippet d
 	#define
-snippet ifdef
+snippet ifd
 	#ifdef ${1:FOO}
 		${2:#define }
 	#endif
@@ -33,12 +33,15 @@ snippet #if
 # Header Include-Guard
 snippet once
 	#ifndef ${1:`toupper(Filename('$1_H', 'UNTITLED_H'))`}
-
 	#define $1
 
 	${2}
 
 	#endif /* end of include guard: $1 */
+# Malloc
+snippet m
+	($1 *) malloc(${2:length} * sizeof(${1:char}));
+	${3}
 # If Condition
 snippet if
 	if (${1:/* condition */}) {

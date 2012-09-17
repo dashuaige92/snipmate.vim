@@ -117,6 +117,8 @@ snippet |
 	\verts{${1}}
 snippet ||
 	\Verts{${1}}
+snippet \v
+	\verb|${1}|
 # Styling
 snippet tf
 	\textbf{${1:term}}${2}
@@ -133,6 +135,10 @@ snippet lemma
 	\begin{lemma}
 		${1}
 	\end{lemma}
+snippet ans
+	\begin{proof}[Answer]
+		${1}
+	\end{proof}
 snippet claim
 	\begin{claim}
 		${1}
@@ -200,6 +206,10 @@ snippet align*
 	\begin{align*}
 		${1}
 	\end{align*}
+snippet aligned
+	\begin{aligned}
+		${1}
+	\end{aligned}
 # Enumerate
 snippet enum
 	\begin{enumerate}
@@ -304,3 +314,8 @@ snippet array
 	\parens{\begin{array}{${1:cc}}
 		${2}
 	\end{array}}
+# Table
+snippet array
+	\begin{array}{${1:cc}}
+		${2}
+	\end{array}

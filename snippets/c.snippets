@@ -40,8 +40,7 @@ snippet once
 	#endif /* end of include guard: $1 */
 # Malloc
 snippet m
-	($1 *) malloc(${2:length} * sizeof(${1:char}));
-	${3}
+	($1 *) malloc(${2:length} * sizeof(${1:char}));${3}
 # If Condition
 snippet if
 	if (${1:/* condition */}) {

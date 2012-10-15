@@ -1,5 +1,5 @@
 # Templates
-snippet tmp
+snippet !
 	\documentclass{article}
 	\usepackage{mydefaults}
 	\author{Kenneth Cheng (kc2640)}
@@ -64,6 +64,8 @@ snippet e
 	\epsilon${1}
 snippet g
 	\gamma${1}
+snippet k
+	\kappa${1}
 snippet l
 	\lambda${1}
 snippet o
@@ -237,7 +239,7 @@ snippet enum
 # Cases
 snippet cases
 	\begin{cases}
-		${1:equation}, &\text{ if }${2:case}\\
+		${1:equation}, & \text{ if } ${2:case} \\
 		${3}
 	\end{cases}
 # Split
@@ -282,22 +284,22 @@ snippet par
 	${3}
 	% paragraph $2 (end)
 # Sub Paragraph
-snippet subp
+snippet Subp
 	\subparagraph{${1:subparagraph name}} % (fold)
 	\label{subp:${2:$1}}
 	${3}
 	% subparagraph $2 (end)
-snippet itd
+snippet Itd
 	\item[${1:description}] ${2:item}
-snippet figure
+snippet Figure
 	${1:Figure}~\ref{${2:fig:}}${3}
-snippet table
+snippet Table
 	${1:Table}~\ref{${2:tab:}}${3}
-snippet listing
+snippet Listing
 	${1:Listing}~\ref{${2:list}}${3}
-snippet section
+snippet Section
 	${1:Section}~\ref{${2:sec:}}${3}
-snippet page
+snippet Page
 	${1:page}~\pageref{${2}}${3}
 # Gather(ed)
 snippet gat

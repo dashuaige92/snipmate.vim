@@ -1,3 +1,23 @@
+# Templates
+snippet !
+	#! /usr/bin/python
+
+	"""
+	python ${2:script.py [args]}
+		${3:[TODO] Brief description of program.}
+	"""
+
+	if __name__ == "__main__":
+
+		if len(sys.argv) != ${4:1}:
+			usage()
+			sys.exit(2)
+
+		${5}
+snippet meta
+	__author__="Kenneth Cheng"
+	__email__="kc2640@columbia.edu"
+	__date__ ="$${1:Jan 1, 2013}"
 snippet #!
 	#!/usr/bin/env python
 snippet i

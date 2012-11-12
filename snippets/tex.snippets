@@ -148,6 +148,8 @@ snippet -
 	\floors{${1}}
 snippet +
 	\ceils{${1}}
+snippet |
+	\verts{${1}}
 snippet ||
 	\Verts{${1}}
 snippet \v
@@ -215,9 +217,13 @@ snippet begin
 	\end{$1}
 # Tabular
 snippet tab
-	\begin{${1:tabular}}{${2:c}}
+	\begin{${1:tabular}}{${2:|c|c|}}
 	${3}
 	\end{$1}
+snippet mr
+	\multirow{${1:2}}*{${2:Foo}}
+snippet mc
+	\multicolumn{${1:2}}{${2:|c|}}{${3:Foo}}
 # Align(ed)
 snippet align
 	\begin{align${1}}

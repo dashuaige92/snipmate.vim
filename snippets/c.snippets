@@ -65,12 +65,16 @@ snippet wh
 	}
 # For Loop
 snippet for
-	for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
-		${4:/* code */}
+	for (${2:i} = ${3:0}; $2 < ${1:count}; $2${4:++}) {
+		${5:/* code */}
 	}
 snippet fori
-	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
-		${4:/* code */}
+	for (int ${2:i} = ${3:0}; $2 < ${1:count}; $2${4:++}) {
+		${5:/* code */}
+	}
+snippet forr
+	for (${1:std::set}<${2:Color}>::iterator ${3:i} = ${4:container}.begin(); i != $4.end(); i++) {
+		${5:/* code */}
 	}
 # Custom For Loop
 snippet forr

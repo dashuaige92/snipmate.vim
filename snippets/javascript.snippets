@@ -5,6 +5,15 @@ snippet sf
 	(function() {
 		${1}
 	})();
+# Brackets snippet snippet
+snippet snip
+	{
+		"name": "${1:div}",
+		"trigger": "${2:d}",
+		"usage": "$2 ${3}",
+		"description": "${4:Create a div}",
+		"template": "<div>\n !!{cursor}\n</div>"
+	},
 ################################################# DEFAULTS BELOW
 # Object Method
 snippet mf
